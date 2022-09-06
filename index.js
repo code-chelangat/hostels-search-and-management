@@ -1,4 +1,4 @@
-var requestOptions = {
+let  requestOptions = {
     method: 'GET',
     redirect: 'follow'
   };
@@ -7,4 +7,3 @@ var requestOptions = {
     .then(response => response.text())
     .then(result => console.log(result))
     .catch(error => console.log('error', error));
-    
