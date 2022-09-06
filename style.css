@@ -1,0 +1,112 @@
+:root{
+    --primary-col: #f5f5f5;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #ccc;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+}
+
+/* Universal classes */
+
+.main{
+    width: 80%;
+    margin: auto;
+    background: var(--primary-col);
+    min-height: inherit;
+}
+
+/* navigation */
+
+.navbar{
+    min-height: 70px;
+    background: #333;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.navbar .menu ul{
+    list-style: none;
+}
+
+.navbar .menu ul li a{
+    color: var(--primary-col);
+    text-decoration: none;
+    float: left;
+    padding: 10px;
+    font-size: 15px;
+}
+
+.navbar .menu ul li a:hover{
+    background: var(--primary-col);
+    color: #333;
+    transition: 500ms ease-in-out;
+}
+
+.icon, .menu, .search{
+    margin: 30px 0px;
+}
+
+.logo{
+    color: var(--primary-col);
+    margin: 0px 20px;
+}
+
+/* search and button classes */
+
+.srch, .btn{
+    padding: 8px;
+}
+
+/* info class */
+
+.info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0px;
+    line-height: 1.8;
+    text-align: center;
+}
+
+/* call us button in info section */
+
+.btn.callus{
+    background: #333; border:none;width: 200px;
+    margin: 20px;
+}
+
+.btn.callus a{
+    text-decoration: none;
+    color: var(--primary-col);
+}
+
+/* form class */
+
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 40vh;
+    margin: 20px;
+}
+
+.form input, .form button{
+    margin: 20px;
+    width: 200px;
+}
+
+.form button{
+    background: #333;
+    color: var(--primary-col);
+    border: none;
+    border-radius: 5px;
+}
