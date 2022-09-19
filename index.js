@@ -27,3 +27,23 @@ fetch("http://localhost:3000/hostels/1")
       location.innerHTML = Response.location;
     });
   });
+
+  const btn = document.getElementById("Callus");
+fetch("http://localhost:3000/hostels/2")
+  .then((Response) => {
+    if (Response.ok) {
+      return Response.json();
+    } else {
+      throw new Error("data not fetched");
+    }
+  })
+  .then((Response) => {
+    btn.addEventListener("click", function () {
+     
+      console.log(Response);
+      const name = document.getElementById("hostel-name");
+      const location = document.getElementById("hostel-location");
+      name.innerHTML = Response.name;
+      location.innerHTML = Response.location;
+    });
+  });
