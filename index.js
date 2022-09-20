@@ -9,7 +9,7 @@
 //     .catch(error => console.log('error', error));
 
 const button = document.getElementById("Marku");
-fetch("http://localhost:3000/hostels/1")
+fetch("https://node-hostel-combine-suh.herokuapp.com/api/v1/hostels/5d725a1b7b292f5f8ceff788")  
   .then((Response) => {
     if (Response.ok) {
       return Response.json();
@@ -20,16 +20,16 @@ fetch("http://localhost:3000/hostels/1")
   .then((Response) => {
     button.addEventListener("click", function () {
      
-      console.log(Response);
+      console.log(Response.data.name);
       const name = document.getElementById("hostel-name");
       const location = document.getElementById("hostel-location");
-      name.innerHTML = Response.name;
-      location.innerHTML = Response.location;
+      name.innerHTML = Response.data.name;
+      location.innerHTML = Response.data.location.street;
     });
   });
 
   const btn = document.getElementById("Callus");
-fetch("http://localhost:3000/hostels/2")
+fetch("https://node-hostel-combine-suh.herokuapp.com/api/v1/hostels/5d725a037b292f5f8ceff787")
   .then((Response) => {
     if (Response.ok) {
       return Response.json();
@@ -40,15 +40,15 @@ fetch("http://localhost:3000/hostels/2")
   .then((Response) => {
     btn.addEventListener("click", function () {
      
-      console.log(Response);
+      console.log(Response.data.name);
       const name = document.getElementById("hostel-name");
       const location = document.getElementById("hostel-location");
-      name.innerHTML = Response.name;
-      location.innerHTML = Response.location;
+      name.innerHTML = Response.data.name;
+      location.innerHTML = Response.data.location.street;
     });
   });
   const rss = document.getElementById("siri");
-fetch("http://localhost:3000/hostels/3")
+fetch("https://node-hostel-combine-suh.herokuapp.com/api/v1/hostels/5d713a66ec8f2b88b8f830b8")
   .then((Response) => {
     if (Response.ok) {
       return Response.json();
@@ -59,15 +59,15 @@ fetch("http://localhost:3000/hostels/3")
   .then((Response) => {
     rss.addEventListener("click", function () {
      
-      console.log(Response);
+      console.log(Response.data.name);
       const name = document.getElementById("hostel-name");
       const location = document.getElementById("hostel-location");
-      name.innerHTML = Response.name;
-      location.innerHTML = Response.location;
+      name.innerHTML = Response.data.name;
+      location.innerHTML = Response.data.location.street;
     });
   });
   const hza = document.getElementById("hunza");
-fetch("http://localhost:3000/hostels/4")
+fetch("https://node-hostel-combine-suh.herokuapp.com/api/v1/hostels/5d713995b721c3bb38c1f5d0")
   .then((Response) => {
     if (Response.ok) {
       return Response.json();
@@ -78,48 +78,12 @@ fetch("http://localhost:3000/hostels/4")
   .then((Response) => {
     hza.addEventListener("click", function () {
      
-      console.log(Response);
+      console.log(Response.data.name);
       const name = document.getElementById("hostel-name");
       const location = document.getElementById("hostel-location");
-      name.innerHTML = Response.name;
-      location.innerHTML = Response.location;
+      name.innerHTML = Response.data.name;
+      location.innerHTML = Response.data.location.street;
     });
   });
-  const gns = document.getElementById("Ginas");
-  fetch("http://localhost:3000/hostels/5")
-    .then((Response) => {
-      if (Response.ok) {
-        return Response.json();
-      } else {
-        throw new Error("data not fetched");
-      }
-    })
-    .then((Response) => {
-      gns.addEventListener("click", function () {
-       
-        console.log(Response);
-        const name = document.getElementById("hostel-name");
-        const location = document.getElementById("hostel-location");
-        name.innerHTML = Response.name;
-        location.innerHTML = Response.location;
-      });
-    });
-    const nza = document.getElementById("nzana");
-fetch("http://localhost:3000/hostels/6")
-  .then((Response) => {
-    if (Response.ok) {
-      return Response.json();
-    } else {
-      throw new Error("data not fetched");
-    }
-  })
-  .then((Response) => {
-    nza.addEventListener("click", function () {
-     
-      console.log(Response);
-      const name = document.getElementById("hostel-name");
-      const location = document.getElementById("hostel-location");
-      name.innerHTML = Response.name;
-      location.innerHTML = Response.location;
-    });
-  });
+
+  
